@@ -9,16 +9,20 @@ Currently, two official plugins are available:
 
 - Step-by-Step Procedure to Retrieve Weather Data using OpenWeatherMap API
 
-**1. Sign Up for an API Key:
-**
-Before using the OpenWeatherMap API, you need to sign up on their website to get an API key.
-Go to the OpenWeatherMap website (https://openweathermap.org/) and create an account if you don't have one already.
-After logging in, navigate to the API Keys section and generate a new API key. Keep this key secure as it will be used to authenticate your requests.
 
-**2. Construct the API Request URL:
-**
-The API endpoint for fetching weather data is https://api.openweathermap.org/data/2.5/weather.
-Replace ${city} in the URL with the name of the city for which you want to retrieve weather data. For example, if you want to get weather data for London, the URL will be https://api.openweathermap.org/data/2.5/weather?q=London.
-Replace ${apikey} with the API key you obtained in step 1.
-So, the complete URL will look like: https://api.openweathermap.org/data/2.5/weather?q=London&appid=YOUR_API_KEY.
+1. Sign Up for an API Key:
+
+Before proceeding, ensure you have signed up for an account on the OpenWeatherMap website (https://openweathermap.org/). If you haven't already done so, create an account and log in.
+
+Once logged in, navigate to the API Keys section of your account dashboard. Here, you'll be able to generate a new API key. Click on the "Generate" or "Create API Key" button to obtain your unique API key. Ensure you keep this key secure as it will be used to authenticate your requests.
+
+2. Construct the API Request URL:
+
+After obtaining your API key, create a file named .env in the root directory of your project. This file will store sensitive information like your API key.
+
+Inside the .env file, define a variable to hold your API key. For example:
+
+--> API_KEY=your_api_key_here
+
+In your code, you can access this API key by using environment variables, depending on the programming language or framework you are using.
 
